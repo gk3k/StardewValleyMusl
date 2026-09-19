@@ -8,7 +8,7 @@ that it wouldn't take too much more work to run this emulated under aarch64.
 - You need a Linux native Steam copy of the game
 
 ## Guide
-- Step 1 - Obtain a Linux native Steam copy of the game
+- Step 1 - Obtain a Linux native Steam copy of the game<br>
 I can't stop you from pirating it, but please don't (Unless regional pricing
 make it prohibitively expensive, or you can't purchase it for other reasons).
 Support indie games :). Basically, obtain the `steamapps/common/Stardew Valley` folder.
@@ -17,7 +17,7 @@ Personally, I did this by installing Steam from flatpak, downloading the game,
 and copying the `~/.var/app/com.valvesoftware.Steam/data/Steam/steamapps/common/Stardew Valley/` folder.
 
 - Step 2 - Patch the `Stardew Valley` ELF file to utilize gcompat and `ld-musl-x86_64.so.1` as the
-interpreter.
+interpreter.<br>
 This is standard practice when patching anything pre-compiled away from glibc.
 Install `gcompat` and `patchelf`.
 I copied the `Stardew Valley` executable to `StardewValleyMusl` so I could keep the original un-edited
@@ -26,7 +26,7 @@ Then, to add the gcompat dependency and change the interpreter, I ran:
 `patchelf --set-interpreter /lib/ld-musl-x86_64.so.1 StardewValleyMusl`
 `patchelf --add-needed libgcompat.so.0 StardewValleyMusl`
 
-- Step 3 - Replace the native `libopenal.so.1`
+- Step 3 - Replace the native `libopenal.so.1`<br>
 With the original version that is packaged with the game, it would segfault sometime into OpenAL's
 init. Replacing it with a native version, of which I got from the `openal-soft` package (in Alpine's
 repos) fixed the issue.
@@ -34,7 +34,7 @@ Basically, by that I mean:
 `rm libopenal.so.1`
 `cp /usr/lib/libopenal.so.1 libopenal.so.1`
 
-- Step 4 - Run the game!
+- Step 4 - Run the game!<br>
 ![Screenshot of the game running](/pictures/running.jpg)
 
 ## A note on Controller support
