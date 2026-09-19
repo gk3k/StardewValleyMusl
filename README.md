@@ -12,7 +12,6 @@ that it wouldn't take too much more work to run this emulated under aarch64.
 I can't stop you from pirating it, but please don't (Unless regional pricing
 make it prohibitively expensive, or you can't purchase it for other reasons).
 Support indie games :). Basically, obtain the `steamapps/common/Stardew Valley` folder.
-
 Personally, I did this by installing Steam from flatpak, downloading the game,
 and copying the `~/.var/app/com.valvesoftware.Steam/data/Steam/steamapps/common/Stardew Valley/` folder.
 
