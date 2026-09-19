@@ -35,6 +35,8 @@ Basically, by that I mean:<br>
 `cp /usr/lib/libopenal.so.1 libopenal.so.1`<br>
 
 - Step 4 - Run the game!<br>
+Run the `StardewValleyMusl` to play! In the screenshot below, I ran it in LLDB, but you don't have to.
+Just treat it as a normal executable now!
 ![Screenshot of the game running](/pictures/running.jpg)
 
 ## A note on Controller support
