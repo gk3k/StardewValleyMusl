@@ -29,10 +29,10 @@ Then, to add the gcompat dependency and change the interpreter, I ran:<br>
 - Step 3 - Replace the native `libopenal.so.1`<br>
 With the original version that is packaged with the game, it would segfault sometime into OpenAL's
 init. Replacing it with a native version, of which I got from the `openal-soft` package (in Alpine's
-repos) fixed the issue.
-Basically, by that I mean:
-`rm libopenal.so.1`
-`cp /usr/lib/libopenal.so.1 libopenal.so.1`
+repos) fixed the issue.<br>
+Basically, by that I mean:<br>
+`rm libopenal.so.1`<br>
+`cp /usr/lib/libopenal.so.1 libopenal.so.1`<br>
 
 - Step 4 - Run the game!<br>
 ![Screenshot of the game running](/pictures/running.jpg)
